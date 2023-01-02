@@ -47,15 +47,9 @@ function Slider() {
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
         className='w-full h-full bg-center bg-cover duration-500'
+        onClick={nextSlide}
       ></div>
       {/* Left Arrow */}
-      <div onClick={prevSlide} className='hidden group-hover:block absolute top-[40%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-3 bg-black/20  text-white cursor-pointer'>
-        <ArrowLeftIcon  className={classes.icons} />
-      </div>
-      {/* Right Arrow */}
-      <div onClick={nextSlide} className='hidden group-hover:block absolute top-[40%] -translate-x-0 translate-y-[-50%] right-5 text-2xl rounded-full p-3 bg-black/20 text-white cursor-pointer'>
-        <ArrowRightIcon  className={classes.icons} />
-      </div>
       <div className='flex top-4 justify-center py-2'>
         {slides.map((slide, slideIndex) => (
           <div
