@@ -1,0 +1,129 @@
+.container{
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    transition: ease-out;
+    transition-duration: 0.5s;
+}
+.containerScrolled{
+  background-color:  rgb(2, 8, 41);
+  top: 0;
+  display: flex;
+  position: sticky;
+  z-index: 1;
+
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  transition-timing-function: ease-in;
+    transition: all 0.5s;
+}
+
+.logoDisney{
+    cursor: pointer;
+    object-fit: contain;
+    margin-right: 50px;
+    margin-top: -0.5rem;
+
+}
+
+.avatar{
+  cursor: pointer;
+  height: 45px;
+  width: 45px;
+  object-fit: contain;
+  margin-left: auto;
+  margin-right: 15px;
+}
+
+.avatar:hover{
+    transform: scale(1.2);
+    transition: 1s;
+}
+
+.logoDisney:hover{
+    transform: scale(1.2);
+    transition: 1s;
+
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    margin-right: 50px;
+    color: white;
+    cursor: pointer;
+
+}
+
+.wrapperList{
+  display: flex;
+  align-items: center;
+  margin-right: 50px;
+  color: white;
+  cursor: pointer;
+
+}
+
+.icons{
+    margin-right: 7px;
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+    color: white;
+}
+
+.wrapper p{
+    display: inline-block;
+    position: relative;
+    font-size: 1.2rem;
+  }
+
+  .wrapperList p{
+    display: inline-block;
+    position: relative;
+    font-size: 1.2rem;
+  }
+  
+  .wrapper p::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffffff;
+    transform-origin: bottom left;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .wrapper p:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom right;
+  }
+
+  @media only screen and (max-width: 700px) {
+    .wrapper {
+        display: none;
+    }
+
+    .wrapperList{
+      display: flex;
+      align-items: center;
+      color: white;
+      cursor: pointer;    
+    }
+
+    .wrapperList p{
+      display: inline-block;
+      position: relative;
+      font-size: 1.4rem;
+    }
+}

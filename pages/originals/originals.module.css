@@ -1,0 +1,38 @@
+.body{
+    background-color: rgb(26, 29, 41);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.wrapper{
+    color: white;
+    width: 100%;
+    background-color: rgb(26, 29, 41);
+    padding: 72px;
+    letter-spacing: 15px;
+    text-align: center;
+    font-size: xx-large;
+
+    transition: ease-out;
+    transition-duration: 0.5s;
+}
+
+.wrapperScrolled{
+    color: white;
+    width: 100%;
+    background-color: rgb(26, 29, 41);
+    padding: 42px;
+    letter-spacing: 10px;
+    text-align: center;
+    font-size: xx-large;
+
+    transition: ease-in;
+    transition-duration: 0.5s;
+}

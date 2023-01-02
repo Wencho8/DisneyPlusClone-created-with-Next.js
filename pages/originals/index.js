@@ -1,15 +1,33 @@
-import HeaderBar from "../components/HeaderBar";
-import Slider from "../components/Slider";
-import CategoriesDisney from "../components/CategoriesDisney";
-import MovieRow from "../components/MovieRow";
-import URLs from "../components/request";
+import HeaderBar from "../../components/HeaderBar";
+import MovieRow from "../../components/MovieRow";
+import URLs from "../../components/request";
 import Head from 'next/head';
+import classes from "./originals.module.css";
+import { useState, useEffect} from "react";
 
 function Home(props) {
+ 
+  const [show, handleShow] = useState(false);
+
+  useEffect (() => {  
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100 ) {
+            handleShow(true);
+        } else {
+            handleShow(false);
+        }
+    })
+    return () => {
+        window.removeEventListener('scroll',null) //Removerlo para que no se quede escuchando
+    }
+
+} ,[])
+
+
   return (
-    <div className="app" >
+    <div className={classes.body}>
       <Head>
-        <title>Disney+Clone | Made by WenceslaoAvalos</title>
+        <title> Originals | Disney+Clone | Made by WenceslaoAvalos</title>
         <link rel="shortcut icon" href="/image/favicon.ico" />
         <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png" />
@@ -19,9 +37,13 @@ function Home(props) {
           content="Disney+ is the ultimate streaming destination for entertainment from Disney, Pixar, Marvel, Star Wars, and National Geographic. Start streaming today."
         />
       </Head>
+      
+      <div className={classes.container}>
       <HeaderBar />
-      <Slider />
-      <CategoriesDisney />
+        <div className={`${classes.wrapper} ${show  && classes.wrapperScrolled} `}>
+          <h1>ORIGINALS</h1>
+        </div> 
+      </div>
       <MovieRow movies={props.dOriginal} title="Disney Originals" />
       <MovieRow movies={props.trending} title="Trending" />
       <MovieRow movies={props.TopRated} title="Top Rated" />
