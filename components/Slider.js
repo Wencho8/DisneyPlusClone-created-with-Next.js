@@ -46,10 +46,14 @@ function Slider() {
      <div className='h-[300px] w-full mt-3  group'>
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-        className='cursor-pointer w-full h-full bg-center bg-cover duration-500'
-        onClick={nextSlide}
-        
+        className='items-center flex justify-between w-full h-full bg-center bg-cover duration-500'    
       >
+        <div onClick={prevSlide} className='hidden group-hover:block z-1 cursor-pointer text-3xl text-white mx-10 hover:text-4xl'>
+          ❰
+        </div>
+        <div onClick={nextSlide} className='hidden group-hover:block z-1 cursor-pointer text-3xl text-white mx-10 hover:text-4xl'>
+          ❱
+        </div>
       </div>
       <div className='flex top-4 justify-center py-2'>
         {slides.map((slide, slideIndex) => (
