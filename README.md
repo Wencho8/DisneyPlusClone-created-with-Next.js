@@ -18,7 +18,7 @@ Images:
 ![Disney4](https://user-images.githubusercontent.com/103704812/210386744-e981c866-cf0e-4dc8-a6ad-1233b66ab11b.png)
 ![Disney5](https://user-images.githubusercontent.com/103704812/210386714-4e22bb6a-52ad-4439-bf8a-ca83460c016e.png)
 
-Phone View:
+
 ![disneyPhne](https://user-images.githubusercontent.com/103704812/210388400-6f752516-c956-40aa-ad32-9f1cf578197b.png)
 ![Phone2](https://user-images.githubusercontent.com/103704812/210388769-51102362-bab9-4614-b450-1b301549c0f1.png)
 
