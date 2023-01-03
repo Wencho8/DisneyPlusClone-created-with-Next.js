@@ -46,10 +46,11 @@ function Slider() {
      <div className='h-[300px] w-full mt-3  group'>
       <div
         style={{ backgroundImage: `url(${slides[currentIndex].url})` }}
-        className='w-full h-full bg-center bg-cover duration-500'
+        className='cursor-pointer w-full h-full bg-center bg-cover duration-500'
         onClick={nextSlide}
-      ></div>
-      {/* Left Arrow */}
+        
+      >
+      </div>
       <div className='flex top-4 justify-center py-2'>
         {slides.map((slide, slideIndex) => (
           <div
@@ -57,7 +58,6 @@ function Slider() {
             onClick={() => goToSlide(slideIndex)}
             className='text-2xl cursor-pointer'
           >
-            <ArrowRightIcon />
           </div>
         ))}
       </div>
