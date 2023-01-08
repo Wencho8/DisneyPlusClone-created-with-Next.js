@@ -1,4 +1,4 @@
-Responsive Frontend of Disney+ website, includes the main page, the original movies page, an individual movie/serie page with their information and a dinamic watchlist of movies/series.
+Responsive Frontend of Disney+ website, includes the main page, the original movies page, an individual movie/serie section with their information and a dinamic watchlist of movies/series.
 
 This project was created with the use of the next features:
 * Next.js
