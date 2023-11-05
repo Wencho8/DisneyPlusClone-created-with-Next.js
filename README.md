@@ -7,7 +7,7 @@ This project was created with the use of the next features:
 * HeroIconsPackage
 * CSS modules and TailwindCSS.
 
-You can check it out here:
+Check it out here:
   https://disney-plus-clone-created-with-next-js.vercel.app/
 
 Images:
